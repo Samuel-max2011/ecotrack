@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="The main interactive page where users record daily green actions">
+		<meta>
+		<title>EcoTrack - Habit Dashboard</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<style>
+			@media (max-width: 768px) {
+				.navbar {
+					padding: 1rem;
+				}
+
+				.list-group-item {
+					font-size: 0.9rem;
+					padding: 0.75rem 1rem;
+				}
+
+				.container {
+					padding: 0 1rem;
+				}
+
+				#resetButton {
+					width: 100%;
+				}
+			}
+
+			@media (max-width: 576px) {
+				.navbar {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				.navbar-nav {
+					flex-direction: column;
+					width: 100%;
+				}
+
+				.navbar-nav .nav-item {
+					width: 100%;
+					text-align: left;
+				}
+
+				.list-group-item {
+					font-size: 0.8rem;
+				}
+
+				.progress {
+					height: 1rem;
+				}
+			}
+
+			@media (max-width: 768px) {
+				footer .container {
+					padding: 1rem;
+				}
+
+				footer p {
+					font-size: 0.9rem;
+				}
+
+				footer .d-flex {
+					flex-wrap: wrap;
+				}
+
+				footer .d-flex a {
+					margin-bottom: 0.5rem;
+				}
+			}
+
+			@media (max-width: 576px) {
+				footer p {
+					font-size: 0.8rem;
+				}
+
+				footer .d-flex {
+					justify-content: center;
+				}
+
+				footer .d-flex a {
+					width: 100%;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+
+	<body style="background: #f5f5dc;">
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-success position-sticky top-0 z-3"
+			style="padding: 1rem 2rem;" aria-label="Main navigation">
+			<div class="container-fluid">
+				<a href="#" class="navbar-brand text-light" aria-label="EcoTrack Home">EcoTrack</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link text-light" href="index.html" aria-label="Navigate to Home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="habits.html" aria-label="Navigate to Habits">Habits</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="tips.html" aria-label="Navigate to Tips">Tips</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="about.html" aria-label="Navigate to About">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="contact.html"
+								aria-label="Navigate to Contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container text-center mt-5">
+			<h1 class="mb-4">Today's Eco Actions</h1>
+			<p class="lead mb-4">Monitor and improve your daily eco-friendly actions.</p>
+			<ul class="list-group">
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					<label>
+						<input type="checkbox" data-points="10"> Planted or watered a tree
+					</label>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					<label>
+						<input type="checkbox" data-points="10"> Walked or biked instead of driving
+					</label>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					<label>
+						<input type="checkbox" data-points="10"> Turned off lights when leaving a room
+					</label>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					<label>
+						<input type="checkbox" data-points="10"> Recycled waste properly
+					</label>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					<label>
+						<input type="checkbox" data-points="10"> Saved water while washing
+					</label>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					<label>
+						<input type="checkbox" data-points="10"> Used reusable bottle or bag
+					</label>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					<label>
+						<input type="checkbox" data-points="10"> Used public transportation
+					</label>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					<label>
+						<input type="checkbox" data-points="10"> Donated to an environmental cause
+					</label>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					<label>
+						<input type="checkbox" data-points="10"> Reduced food waste
+					</label>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					<label>
+						<input type="checkbox" data-points="10"> Participated in a community cleanup
+					</label>
+				</li>
+			</ul>
+
+			<div class="mt-4">
+				<h3>Total Score: <span id="totalScore">0</span></h3>
+				<div class="progress mt-3">
+					<div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+						aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			</div>
+
+			<button id="resetButton" class="btn btn-danger mt-4 mb-3">Reset Progress</button>
+		</div>
+
+		<footer class="bg-dark text-light py-4 mt-5">
+			<div class="container text-center">
+				<p class="mb-1">Website: <a href="https://brainpals.com.ng/" class="text-success"
+						target="_blank">www.brainpals.com.ng</a> | Phone: +234-816-930-4238 | Phone 2:
+					+234-701-608-7695</p>
+				<p class="mb-1">Address: Suite 20 Ladan Plaza off Halims Hotel Ganaja Junction Lokoja, Kogi State,
+					Nigeria.</p>
+				<div class="d-flex justify-content-center mb-3">
+					<a href="https://www.x.com/brainpalscode" class="text-success mx-2" target="_blank">X:
+						brainpalscode</a>
+					<a href="https://www.linkedin.com/company/brainpalscodeacademy" class="text-success mx-2"
+						target="_blank">LinkedIn:
+						brainpalscodeacademy</a>
+					<a href="https://instagram.com/brainpals_code" class="text-success mx-2" target="_blank">Instagram:
+						brainpals_code</a>
+					<a href="https://www.facebook.com/brainpalscode" class="text-success mx-2" target="_blank">Facebook:
+						brainpalscode</a>
+					<a href="https://www.tiktok.com/@brainpalscode" class="text-success mx-2" target="_blank">TikTok:
+						@brainpalscode</a>
+				</div>
+				<p class="mb-0">&copy; 2025 Brainpals Innovation and Technology. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="js/jquery-3.7.1.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+
+</html>

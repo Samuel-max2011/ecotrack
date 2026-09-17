@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description"
+			content="EcoTrack - Green Habit Dashboard to encourage students to adopt simple eco-friendly habits through a fun, interactive dashboard that tracks their daily action and scores them based on how 'green' they live ">
+		<meta name="keywords"
+			content="eco-friendly, habits, dashboard, green living, sustainability, student engagement">
+		<meta name="author" content="Brainpals Innovation and Technology">
+		<title>EcoTrack - Green Habit Dashboard</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			@media (max-width: 768px) {
+				.navbar {
+					padding: 1rem;
+				}
+
+				.card {
+					margin: 0.5rem 0;
+				}
+
+				.container {
+					padding: 0 1rem;
+				}
+
+				#animateBtn {
+					width: 100%;
+				}
+
+				footer .container {
+					padding: 1rem;
+				}
+
+				footer p {
+					font-size: 0.9rem;
+				}
+
+				footer .d-flex {
+					flex-wrap: wrap;
+				}
+
+				footer .d-flex a {
+					margin-bottom: 0.5rem;
+				}
+			}
+
+			@media (max-width: 576px) {
+				.navbar {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				.navbar-nav {
+					flex-direction: column;
+					width: 100%;
+				}
+
+				.navbar-nav .nav-item {
+					width: 100%;
+					text-align: left;
+				}
+
+				.card {
+					font-size: 0.9rem;
+				}
+
+				.card-group {
+					flex-direction: column;
+				}
+
+				footer p {
+					font-size: 0.8rem;
+				}
+
+				footer .d-flex {
+					justify-content: center;
+				}
+
+				footer .d-flex a {
+					width: 100%;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+
+	<body style="background: #f5f5dc;">
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-success position-sticky top-0 z-3"
+			style="padding: 1rem 2rem;" aria-label="Main navigation">
+			<div class="container-fluid">
+				<a href="#" class="navbar-brand text-light" aria-label="EcoTrack Home">EcoTrack</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link text-light" href="index.html" aria-label="Navigate to Home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="habits.html" aria-label="Navigate to Habits">Habits</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="tips.html" aria-label="Navigate to Tips">Tips</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="about.html" aria-label="Navigate to About">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="contact.html"
+								aria-label="Navigate to Contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+		<div class="text-center p-5">
+			<h1 class="mb-4">Welcome to EcoTrack</h1>
+			<p class="lead mb-4">Track your eco-friendly habits every day and see how green you can be!</p>
+			<div class="card-group">
+				<div class="card mx-2">
+					<div class="card-body ">	
+						<h5 class="card-title">Track Your Progress</h5>
+						<p class="card-text">Log your eco-friendly actions daily and monitor your progress over time.
+						</p>
+					</div>
+				</div>
+				<div class="card mx-2">
+					<div class="card-body">
+						<h5 class="card-title">Eco Tips & Rewards</h5>
+						<p class="card-text">Get daily eco-friendly tips and earn rewards for maintaining good habits.
+						</p>
+					</div>
+				</div>
+				<div class="card mx-2">
+					<div class="card-body">
+						<h5 class="card-title">Be Part of the Change</h5>
+						<p class="card-text">Join a community of eco-conscious individuals and share your journey.</p>
+					</div>
+				</div>
+			</div>
+			<a href="habits.html" id="animateBtn" class="btn btn-success btn-lg mt-4" title="Get Started">Get
+				Started</a>
+		</div>
+
+		<footer class="bg-dark text-light py-4 ">
+			<div class="container text-center">
+				<p class="mb-1">Website: <a href="https://brainpals.com.ng/" class="text-success" target="_blank"
+						aria-label="Visit Brainpals website">www.brainpals.com.ng</a> | Phone: <a
+						href="tel:+2348169304238" class="text-success">+234-816-930-4238</a> | Phone 2: <a
+						href="tel:+2347016087695" class="text-success">+234-701-608-7695</a></p>
+				<p class="mb-1">Address: Suite 20 Ladan Plaza off Halims Hotel Ganaja Junction Lokoja, Kogi State,
+					Nigeria.</p>
+				<div class="d-flex justify-content-center mb-3">
+					<a href="https://www.x.com/brainpalscode" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on X">X: brainpalscode</a>
+					<a href="https://www.linkedin.com/company/brainpalscodeacademy" class="text-success mx-2"
+						target="_blank" aria-label="Visit Brainpals on LinkedIn">LinkedIn:
+						brainpalscodeacademy</a>
+					<a href="https://instagram.com/brainpals_code" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on Instagram">Instagram:
+						brainpals_code</a>
+					<a href="https://www.facebook.com/brainpalscode" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on Facebook">Facebook:
+						brainpalscode</a>
+					<a href="https://www.tiktok.com/@brainpalscode" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on TikTok">TikTok:
+						@brainpalscode</a>
+				</div>
+				<p class="mb-0">&copy; 2025 Brainpals Innovation and Technology. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/jquery-3.7.1.js"></script>
+	</body>
+
+</html>

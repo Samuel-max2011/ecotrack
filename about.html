@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About Us - EcoTrack</title>
+
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<style>
+			/* ======================= */
+			/*     PERFECT MODAL FIX   */
+			/* ======================= */
+
+			.custom-modal-content {
+				border-radius: 18px;
+				overflow: hidden;
+				max-width: 420px;
+				margin: auto;
+			}
+
+			.modal-dialog-centered {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			/* Ensure modal does not exceed screen height */
+			.modal-dialog {
+				max-height: 90vh;
+			}
+
+			.modal-body {
+				padding: 0 !important;
+				overflow: hidden !important;
+			}
+
+			.modal-img-area img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				display: block;
+			}
+
+			.modal-info {
+				padding: 20px;
+				text-align: center;
+				background: #f8f9fa;
+			}
+
+			.team-img {
+				cursor: pointer;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-success position-sticky top-0 z-3"
+			style="padding: 1rem 2rem;" aria-label="Main navigation">
+			<div class="container-fluid">
+				<a href="#" class="navbar-brand text-light" aria-label="EcoTrack Home">EcoTrack</a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link text-light" href="habits.html">Habits</a></li>
+						<li class="nav-item"><a class="nav-link text-light" href="tips.html">Tips</a></li>
+						<li class="nav-item"><a class="nav-link text-light active" href="about.html">About</a></li>
+						<li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+		<div class="about-hero">
+			<h1>About EcoTrack</h1>
+			<p>Promoting sustainability through everyday actions</p>
+		</div>
+
+		<div class="container about-section">
+			<div class="about-card">
+				<h2>Our Mission</h2>
+				<p>
+					EcoTrack is designed to help students develop eco-friendly habits by making sustainability simple,
+					fun, and trackable.
+					We provide a dashboard that encourages daily green actions—from recycling to energy saving.
+				</p>
+
+				<h2 class="mt-4">Why It Matters</h2>
+				<p>
+					Every small action counts. EcoTrack motivates students to adopt habits that protect the environment,
+					reduce waste,
+					and build a cleaner future. By tracking progress, learners stay engaged and responsible.
+				</p>
+
+				<h2 class="mt-4">What You Can Do</h2>
+				<ul>
+					<li>Track your daily eco actions</li>
+					<li>Learn practical sustainability tips</li>
+					<li>Build consistent habits that make a difference</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!-- ============================== -->
+		<!--         MEET THE TEAM          -->
+		<!-- ============================== -->
+
+		<div class="container mt-5">
+			<h2 class="text-center my-3">Meet the Team</h2>
+
+			<div class="row g-4">
+
+				<!-- TEAM MEMBER 1 -->
+				<div class="col-md-4 mx-auto">
+					<div class="card shadow team-card">
+						<img src="img/Person.jpg" class="img-fluid team-img" data-bs-toggle="modal"
+							data-bs-target="#member1Modal">
+						<div class="card-body">
+							<h5 class="card-title">Samuel Obi</h5>
+							<p class="card-text">Frontend Designer — built the dashboard UI and animations.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- TEAM MEMBER 1 MODAL -->
+				<div class="modal fade" id="member1Modal" tabindex="-1" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content custom-modal-content">
+
+							<div class="modal-body">
+								<div class="modal-img-area">
+									<img src="img/Person.jpg" alt="Samuel Obi">
+								</div>
+
+								<div class="modal-info">
+									<h5>Samuel Obi</h5>
+									<p>Frontend Designer — built the dashboard UI and creative animations.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-4 mx-auto">
+					<div class="card shadow team-card">
+						<img src="img/Person1.jpg" class="img-fluid team-img" data-bs-toggle="modal"
+							data-bs-target="#member2Modal">
+						<div class="card-body">
+							<h5 class="card-title">Ahmad Saifullah</h5>
+							<p class="card-text">Data Analyst — tracks eco-habit progress and user insights.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="member2Modal" tabindex="-1" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content custom-modal-content">
+
+							<div class="modal-body">
+								<div class="modal-img-area">
+									<img src="img/Person1.jpg" alt="Ahmad Saifullah">
+								</div>
+
+								<div class="modal-info">
+									<h5>Ahmad Saifullah</h5>
+									<p>Data Analyst — monitors habit statistics and provides insights for EcoTrack.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="container text-center mt-5">
+			<h2 class="mb-4">Our Impact</h2>
+			<p class="lead mb-5">See how EcoTrack is making a difference!</p>
+
+			<div class="row g-4 justify-content-center">
+
+				<div class="col-md-4">
+					<div class="card shadow-sm py-4 h-100">
+						<div class="card-body">
+							<i class="bi bi-droplet-fill text-success display-4 mb-3"></i>
+							<h3 id="bottleCounter" class="display-4 fw-bold text-primary">0</h3>
+							<p class="card-text mb-3">Plastic bottles saved this term</p>
+							<div class="progress" style="height: 10px;">
+								<div id="bottleProgress" class="progress-bar bg-primary" role="progressbar"
+									style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card shadow-sm py-4 h-100">
+						<div class="card-body">
+							<i class="bi bi-tree-fill text-success display-4 mb-3"></i>
+							<h3 id="treeCounter" class="display-4 fw-bold text-success">0</h3>
+							<p class="card-text mb-3">Trees planted by our students</p>
+							<div class="progress" style="height: 10px;">
+								<div id="treeProgress" class="progress-bar bg-success" role="progressbar"
+									style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card shadow-sm py-4 h-100">
+						<div class="card-body">
+							<i class="bi bi-lightning-fill text-warning display-4 mb-3"></i>
+							<h3 id="energyCounter" class="display-4 fw-bold text-warning">0</h3>
+							<p class="card-text mb-3">kWh of energy saved</p>
+							<div class="progress" style="height: 10px;">
+								<div id="energyProgress" class="progress-bar bg-warning" role="progressbar"
+									style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<footer class="bg-dark text-light py-4 mt-5">
+			<div class="container text-center">
+
+				<p class="mb-1">
+					Website:
+					<a href="https://brainpals.com.ng/" class="text-success" target="_blank">www.brainpals.com.ng</a>
+					| Phone: <a href="tel:+2348169304238" class="text-success">+234-816-930-4238</a>
+					| Phone 2: <a href="tel:+2347016087695" class="text-success">+234-701-608-7695</a>
+				</p>
+
+				<p class="mb-1">
+					Address: Suite 20 Ladan Plaza off Halims Hotel,
+					Ganaja Junction Lokoja, Kogi State, Nigeria.
+				</p>
+
+				<div class="d-flex justify-content-center mb-3 flex-wrap">
+					<a href="https://www.x.com/brainpalscode" class="text-success mx-2" target="_blank">X:
+						brainpalscode</a>
+					<a href="https://www.linkedin.com/company/brainpalscodeacademy" class="text-success mx-2"
+						target="_blank">LinkedIn: brainpalscodeacademy</a>
+					<a href="https://instagram.com/brainpals_code" class="text-success mx-2" target="_blank">Instagram:
+						brainpals_code</a>
+					<a href="https://www.facebook.com/brainpalscode" class="text-success mx-2" target="_blank">Facebook:
+						brainpalscode</a>
+					<a href="https://www.tiktok.com/@brainpalscode" class="text-success mx-2" target="_blank">TikTok:
+						@brainpalscode</a>
+				</div>
+
+				<p class="mb-0">&copy; 2025 Brainpals Innovation and Technology. All rights reserved.</p>
+
+			</div>
+		</footer>
+
+
+		<script src="js/jquery-3.7.1.js"></script>
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+			function animateCounter ( id, endValue, duration, progressId ) {
+				let start = 0;
+				let increment = endValue / ( duration / 50 );
+				let counter = setInterval( () => {
+					start += increment;
+					if ( start >= endValue ) {
+						start = endValue;
+						clearInterval( counter );
+					}
+					document.getElementById( id ).innerText = Math.floor( start );
+
+					if ( progressId ) {
+						let progressPercent = Math.floor( ( start / endValue ) * 100 );
+						document.getElementById( progressId ).style.width = progressPercent + '%';
+						document.getElementById( progressId ).setAttribute( 'aria-valuenow', progressPercent );
+					}
+				}, 50 );
+			}
+
+			$( document ).ready( function () {
+				$( ".team-card" ).hide().fadeIn( 1200 );
+
+				animateCounter( "bottleCounter", 500, 2000, "bottleProgress" );
+				animateCounter( "treeCounter", 120, 2000, "treeProgress" );
+				animateCounter( "energyCounter", 3500, 2000, "energyProgress" );
+			} );
+		</script>
+
+	</body>
+
+</html>

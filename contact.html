@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Contact EcoTrack for inquiries, feedback, or support.">
+		<meta name="author" content="Brainpals Innovation and Technology">
+		<title>Contact Us - EcoTrack</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			/* Footer Responsiveness */
+			@media (max-width: 768px) {
+				footer .container {
+					padding: 1rem;
+				}
+
+				footer p {
+					font-size: 0.9rem;
+				}
+
+				footer .d-flex {
+					flex-wrap: wrap;
+				}
+
+				footer .d-flex a {
+					margin-bottom: 0.5rem;
+				}
+			}
+
+			@media (max-width: 576px) {
+				footer p {
+					font-size: 0.8rem;
+				}
+
+				footer .d-flex {
+					justify-content: center;
+				}
+
+				footer .d-flex a {
+					width: 100%;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+
+	<body style="background: #f5f5dc;">
+		<nav class="navbar navbar-expand-lg navbar-light bg-success position-sticky top-0 z-3"
+			style="padding: 1rem 2rem;" aria-label="Main navigation">
+			<div class="container-fluid">
+				<a href="#" class="navbar-brand text-light" aria-label="EcoTrack Home">EcoTrack</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link text-light" href="index.html" aria-label="Navigate to Home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="habits.html" aria-label="Navigate to Habits">Habits</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="tips.html" aria-label="Navigate to Tips">Tips</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="about.html" aria-label="Navigate to About">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="contact.html"
+								aria-label="Navigate to Contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container mt-5">
+			<h1 class="text-center mb-4">Contact Us</h1>
+			<p class="text-center mb-4">We would love to hear from you! Please fill out the form below to get in touch
+				with us.</p>
+			<form>
+				<div class="mb-3">
+					<label for="name" class="form-label">Name</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+				</div>
+				<div class="mb-3">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+				</div>
+				<div class="mb-3">
+					<label for="message" class="form-label">Message</label>
+					<textarea class="form-control" id="message" rows="5" placeholder="Enter your message"
+						required></textarea>
+				</div>
+				<button type="submit" class="btn btn-success">Submit</button>
+			</form>
+		</div>
+
+		<footer class="bg-dark text-light py-4 mt-5">
+			<div class="container text-center">
+				<p class="mb-1">Website: <a href="https://brainpals.com.ng/" class="text-success" target="_blank"
+						aria-label="Visit Brainpals website">www.brainpals.com.ng</a> | Phone: <a
+						href="tel:+2348169304238" class="text-success">+234-816-930-4238</a> | Phone 2: <a
+						href="tel:+2347016087695" class="text-success">+234-701-608-7695</a></p>
+				<p class="mb-1">Address: Suite 20 Ladan Plaza off Halims Hotel Ganaja Junction Lokoja, Kogi State,
+					Nigeria.</p>
+				<div class="d-flex justify-content-center mb-3">
+					<a href="https://www.x.com/brainpalscode" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on X">X: brainpalscode</a>
+					<a href="https://www.linkedin.com/company/brainpalscodeacademy" class="text-success mx-2"
+						target="_blank" aria-label="Visit Brainpals on LinkedIn">LinkedIn: brainpalscodeacademy</a>
+					<a href="https://instagram.com/brainpals_code" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on Instagram">Instagram: brainpals_code</a>
+					<a href="https://www.facebook.com/brainpalscode" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on Facebook">Facebook: brainpalscode</a>
+					<a href="https://www.tiktok.com/@brainpalscode" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on TikTok">TikTok: @brainpalscode</a>
+				</div>
+				<p class="mb-0">&copy; 2025 Brainpals Innovation and Technology. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/jquery-3.7.1.js"></script>
+		<script>
+			$( document ).ready( function () {
+				$( 'form' ).on( 'submit', function ( event ) {
+					event.preventDefault();
+
+					$( 'body' ).children().hide();
+
+					let card = $(
+						'<div class="d-flex justify-content-center align-items-center" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #f5f5dc; z-index: 9999;">' +
+						'<div class="card text-center" style="width: 24rem;">' +
+						'<div class="card-body">' +
+						'<h5 class="card-title">Thank You!</h5>' +
+						'<p class="card-text">Your message has being received. We will get back to you shortly.</p>' +
+						'<a href="index.html" class="btn btn-success mt-3">Go to Home</a>' +
+						'</div>' +
+						'</div>' +
+						'</div>'
+					);
+					$( 'body' ).append( card );
+				} );
+			} );
+		</script>
+	</body>
+
+</html>

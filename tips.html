@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Provide environmental education  and motivation">
+		<meta name="author" content="Samuel Obi">
+		<title>EcoTrack - Daily Tips for a Sustainable Future</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f8f9fa;
+				color: #212529;
+			}
+
+			.navbar {
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			.card {
+				border: 1px solid #ddd;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				margin: 1rem 0;
+				padding: 1rem;
+			}
+
+			.card-title {
+				font-weight: bold;
+				color: #198754;
+			}
+
+			.card-text {
+				font-size: 0.9rem;
+				color: #555;
+			}
+
+			.accordion-button {
+				background-color: #e9ecef;
+				color: #495057;
+				border-radius: 5px;
+				transition: background-color 0.3s, color 0.3s;
+			}
+
+			.accordion-button:not(.collapsed) {
+				background-color: #198754;
+				color: #fff;
+			}
+
+			.accordion-button:hover {
+				background-color: #145a32;
+				color: #ffffff;
+			}
+
+			.accordion-button:focus {
+				box-shadow: 0 0 5px rgba(25, 135, 84, 0.5);
+				outline: none;
+			}
+
+			.accordion-body ul {
+				padding-left: 1.5rem;
+			}
+
+			.accordion-body ul li {
+				margin-bottom: 0.5rem;
+			}
+
+			.card:hover {
+				transform: scale(1.02);
+				transition: transform 0.2s ease-in-out;
+				box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+			}
+
+			.btn-primary {
+				background-color: #198754;
+				border: none;
+				transition: background-color 0.3s;
+			}
+
+			.btn-primary:hover {
+				background-color: #145a32;
+			}
+
+			@media (max-width: 768px) {
+				.navbar {
+					padding: 1rem;
+				}
+
+				.card {
+					margin: 0.5rem 0;
+				}
+
+				.accordion-button {
+					font-size: 0.9rem;
+				}
+
+				.container {
+					padding: 0 1rem;
+				}
+			}
+
+			@media (max-width: 576px) {
+				.navbar {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				.navbar-nav {
+					flex-direction: column;
+					width: 100%;
+				}
+
+				.navbar-nav .nav-item {
+					width: 100%;
+					text-align: left;
+				}
+
+				.btn {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-success position-sticky top-0 z-3"
+			style="padding: 1rem 2rem;" aria-label="Main navigation">
+
+			<div class="container-fluid">
+				<a href="#" class="navbar-brand text-light" aria-label="EcoTrack Home">EcoTrack</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link text-light" href="index.html" aria-label="Navigate to Home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="habits.html" aria-label="Navigate to Habits">Habits</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="tips.html" aria-label="Navigate to Tips">Tips</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="about.html" aria-label="Navigate to About">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="contact.html"
+								aria-label="Navigate to Contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container text-center mt-4">
+			<h1 class="mb-4">Daily Eco Tips</h1>
+			<div class="card">
+				<div class="card-body">
+					<h2 class="card-title" id="eco-tip">Loading...</h2>
+					<button class="btn btn-primary mt-3" id="new-tip-btn" aria-label="Show another eco tip">Show Another
+						Tip</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion mt-5" id="tipsAccordion">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="waterTipsHeading">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#waterTips"
+						aria-expanded="true" aria-controls="waterTips">
+						Water Conservation Tips
+					</button>
+				</h2>
+				<div id="waterTips" class="accordion-collapse collapse show" aria-labelledby="waterTipsHeading"
+					data-bs-parent="#tipsAccordion">
+					<div class="accordion-body">
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Turn off taps while brushing</h5>
+								<p class="card-text">Save up to 8 gallons of water per day by turning off the tap while
+									brushing your teeth.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Fix leaking faucets</h5>
+								<p class="card-text">A single dripping faucet can waste over 3,000 gallons of water
+									annually. Fix leaks promptly.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Use a bucket instead of a hose</h5>
+								<p class="card-text">Using a bucket for washing can save hundreds of gallons of water
+									compared to a running hose.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="energyTipsHeading">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#energyTips" aria-expanded="false" aria-controls="energyTips">
+						Energy Saving Tips
+					</button>
+				</h2>
+				<div id="energyTips" class="accordion-collapse collapse" aria-labelledby="energyTipsHeading"
+					data-bs-parent="#tipsAccordion">
+					<div class="accordion-body">
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Switch to LED bulbs</h5>
+								<p class="card-text">LED bulbs use up to 75% less energy and last 25 times longer than
+									incandescent lighting.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Unplug electronics when not in use</h5>
+								<p class="card-text">Electronics in standby mode still consume energy. Unplugging them
+									can
+									save electricity.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Use energy-efficient appliances</h5>
+								<p class="card-text">Energy Star-rated appliances can significantly reduce your energy
+									bills
+									and carbon footprint.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="wasteTipsHeading">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#wasteTips" aria-expanded="false" aria-controls="wasteTips">
+						Waste Reduction Tips
+					</button>
+				</h2>
+				<div id="wasteTips" class="accordion-collapse collapse" aria-labelledby="wasteTipsHeading"
+					data-bs-parent="#tipsAccordion">
+					<div class="accordion-body">
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Recycle paper, plastic, and glass</h5>
+								<p class="card-text">Recycling reduces waste in landfills and conserves natural
+									resources for future use.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Compost your food waste</h5>
+								<p class="card-text">Composting turns organic waste into nutrient-rich soil, reducing
+									methane emissions from landfills.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Use reusable shopping bags</h5>
+								<p class="card-text">Reusable bags reduce the need for single-use plastics, which can
+									take centuries to decompose.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="transportationTipsHeading">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#transportationTips" aria-expanded="false" aria-controls="transportationTips">
+						Transportation Tips
+					</button>
+				</h2>
+				<div id="transportationTips" class="accordion-collapse collapse"
+					aria-labelledby="transportationTipsHeading" data-bs-parent="#tipsAccordion">
+					<div class="accordion-body">
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Carpool to reduce emissions</h5>
+								<p class="card-text">Sharing rides with others reduces the number of vehicles on the
+									road, cutting down on greenhouse gas emissions.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Use public transportation</h5>
+								<p class="card-text">Buses and trains are more energy-efficient than individual cars,
+									helping to lower your carbon footprint.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Walk or bike for short distances</h5>
+								<p class="card-text">Walking or biking not only saves fuel but also promotes a healthier
+									lifestyle.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Maintain your vehicle for efficiency</h5>
+								<p class="card-text">Regular maintenance ensures your vehicle runs efficiently, reducing
+									fuel consumption and emissions.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Consider electric or hybrid vehicles</h5>
+								<p class="card-text">Electric and hybrid vehicles produce fewer emissions and can save
+									money on fuel in the long run.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="foodTipsHeading">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#foodTips" aria-expanded="false" aria-controls="foodTips">
+						Food Sustainability Tips
+					</button>
+				</h2>
+				<div id="foodTips" class="accordion-collapse collapse" aria-labelledby="foodTipsHeading"
+					data-bs-parent="#tipsAccordion">
+					<div class="accordion-body">
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Buy organic produce</h5>
+								<p class="card-text">Organic farming avoids harmful pesticides, promoting healthier
+									ecosystems and food.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Reduce meat consumption</h5>
+								<p class="card-text">Meat production is resource-intensive. Eating less meat can lower
+									your environmental impact.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Support local farmers</h5>
+								<p class="card-text">Buying locally reduces transportation emissions and supports your
+									community's economy.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Plan meals to avoid food waste</h5>
+								<p class="card-text">Meal planning helps you buy only what you need, reducing food waste
+									and saving money.</p>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="card-title">Use reusable containers for storage</h5>
+								<p class="card-text">Reusable containers reduce the need for single-use plastics and
+									keep food fresh longer.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="bg-dark text-light py-4 mt-5">
+			<div class="container text-center">
+				<p class="mb-1">Website: <a href="https://brainpals.com.ng/" class="text-success" target="_blank"
+						aria-label="Visit Brainpals website">www.brainpals.com.ng</a> | Phone: <a href="tel:+2348169304238"
+						class="text-success">+234-816-930-4238</a> | Phone 2: <a href="tel:+2347016087695"
+						class="text-success">+234-701-608-7695</a></p>
+				<p class="mb-1">Address: Suite 20 Ladan Plaza off Halims Hotel Ganaja Junction Lokoja, Kogi State,
+					Nigeria.</p>
+				<div class="d-flex justify-content-center mb-3">
+					<a href="https://www.x.com/brainpalscode" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on X">X: brainpalscode</a>
+					<a href="https://www.linkedin.com/company/brainpalscodeacademy" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on LinkedIn">LinkedIn:
+						brainpalscodeacademy</a>
+					<a href="https://instagram.com/brainpals_code" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on Instagram">Instagram:
+						brainpals_code</a>
+					<a href="https://www.facebook.com/brainpalscode" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on Facebook">Facebook:
+						brainpalscode</a>
+					<a href="https://www.tiktok.com/@brainpalscode" class="text-success mx-2" target="_blank"
+						aria-label="Visit Brainpals on TikTok">TikTok:
+						@brainpalscode</a>
+				</div>
+				<p class="mb-0">&copy; 2025 Brainpals Innovation and Technology. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="js/jquery-3.7.1.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/tips.js"></script>
+						
+	</body>
+
+</html>
